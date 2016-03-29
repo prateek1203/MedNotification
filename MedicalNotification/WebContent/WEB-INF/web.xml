@@ -4,14 +4,14 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	id="WebApp_ID" version="3.1">
 	<display-name>MedicalNotification</display-name>
-	<welservlete-file-list>
-		<welservlete-file>index.html</welservlete-file>
-		<welservlete-file>index.htm</welservlete-file>
-		<welservlete-file>index.jsp</welservlete-file>
-		<welservlete-file>default.html</welservlete-file>
-		<welservlete-file>default.htm</welservlete-file>
-		<welservlete-file>default.jsp</welservlete-file>
-	</welservlete-file-list>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
 	<!-- <servlet> <servlet-name>config</servlet-name> <servlet-class>org.apache.struts.action.ActionServlet</servlet-class> 
 		</servlet> <servlet-mapping> <servlet-name>config</servlet-name> <url-pattern>*.do</url-pattern> 
 		</servlet-mapping> -->
