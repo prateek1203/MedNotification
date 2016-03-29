@@ -1,0 +1,69 @@
+<div class="container">
+	<div style="width: 100%; padding-left: 20%; padding-right: 20%;">
+		<h4 style="color: purple;">
+			<span style="color: red;" data-ng-bind="patientInfo"></span> <input
+				type="button" name="find" value="Show All Medicines"
+				ng-click="showPatientMedicines()" class="inputButton">
+			<table class="table table-striped table-bordered table-condensed">
+				<thead>
+					<tr>
+						<th>Medicine Name</th>
+						<th>Dose In ADay</th>
+						<th>Dose Day</th>
+						<th>Gap</th>
+						<th>Start Date</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr ng-repeat="med in medicine">
+						<th>{{med.medicineName}}</th>
+						<th>{{med.doseInADay}}</th>
+						<th>{{med.doseDay}}</th>
+						<th>{{med.gapInMedicine}}</th>
+						<th>{{med.startDate}}</th>
+						<th><input type="button" value="Del" class="forminputButton"
+							ng-click="removeMedicineRow(med.medicineName)" ng-model="remove" /></th>
+					</tr>
+				</tfoot>
+			</table>
+			<br> <input type="button" name="Add Medicine"
+				value="Add Medicine" class="inputButton"
+				ng-click="showMedicineDiv()" ng-model="showMedicineForm">
+			<div ng-if="showMedicineForm" ng-cloak="">
+
+				<table class="table table-striped table-bordered table-condensed">
+					<thead>
+						<tr>
+							<th>Medicine Name</th>
+							<th>Dose In A Day</th>
+							<th>Dose Day</th>
+							<th>Gap In Medicine</th>
+							<th>Start Date</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<th><input type="text" class="form-control"
+								placeholder="Medicine Name" ng-model="medName" ng-bind="medName"></th>
+							<th><input type="text" class="form-control"
+								placeholder="How many times in a day" ng-model="dayCounts"
+								ng-bind="dayCounts"></th>
+							<th><input type="text" class="form-control"
+								placeholder="How many days" ng-model="days" ng-nind="days"></th>
+							<th><input type="text" class="form-control"
+								placeholder="Gap in days" ng-model="gap" ng-bind="gap"></th>
+							<th><input type="date" id="datevalue" ng-model="datevalue"
+								class="form-control"></th>
+						</tr>
+					</tfoot>
+				</table>
+				<input type="hidden" ng-model="presId" ng-bind="presId"
+					name="presId"> <input type="Button" value="Save"
+					class="inputButton"
+					ng-click="addMedicine(medName,dayCounts,days,gap,datevalue)">
+				<input type="Button" value="Cancel" class="inputButton"
+					ng-click="clearMed()">
+			</div>
+	</div>
+</div>
