@@ -22,7 +22,8 @@ patient.config(function($routeProvider) {
 
 patient.controller("patientCntrl", function($scope, $http, $location) {
 	$scope.allPrescriptions = '';
-	$scope.showAllPrescription = function() {
+	//$scope.showAllPrescription = function()
+	{
 
 		$http({
 			method : 'POST',
